@@ -3,6 +3,7 @@ import BackButton from "../components/shared/BackButton";
 import BottomNav from "../components/shared/BottomNav";
 import TableCard from "../components/tables/TableCard";
 import { useState } from "react";
+import { tables } from "../constants";
 const Tables = () => {
   const [status, setStatus] = useState("all");
   return (
@@ -34,8 +35,16 @@ const Tables = () => {
         </div>
       </div>
       
-      <div className="  px-16 py-4 ">
-        <TableCard></TableCard>
+      <div className="  flex flex-wrap gap-6 px-5 overflow-y-scroll h-[calc(100vh-5rem-8.5rem)]">
+        {
+          tables.map((table) => {
+            return (
+              <TableCard key={table.id} id={table.id} name={table.name} status={table.status} initials={table.initial}/>
+            )
+          })
+        }
+        
+        
       </div>
 
       <BottomNav></BottomNav>

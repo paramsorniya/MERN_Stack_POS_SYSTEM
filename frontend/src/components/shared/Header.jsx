@@ -23,13 +23,13 @@ const Header = () => {
         <div className="bg-[#1f1f1f] rounded-[15px] p-3 cursor-pointer">
           <FaBell className="text-[#f5f5f5] text-2xl"></FaBell>
         </div>
-        <di className="flex items-center gap-3 cursor-pointer">
+        <div className="flex items-center gap-3 cursor-pointer">
           <FaUserCircle className="text-[#f5f5f5] text-4xl" />
           <div className="flex flex-col items-start">
             <h1 className="text-md text-[#f5f5f5] font-semibold">Param </h1>
             <p className="text-xs text-[#f5f5f5] font-medium">Admin</p>
           </div>
-        </di>
+        </div>
       </div>
     </header>
   );
