@@ -378,6 +378,7 @@ export const menus = [
   { id: 6, name: "Pizzas", bgColor: "#285430" ,icon: "🍕", items: pizzas },
   { id: 7, name: "Alcoholic Drinks", bgColor: "#b73e3e" ,icon: "🍺", items: alcoholicDrinks },
   { id: 8, name: "Salads", bgColor: "#5b45b0" ,icon: "🥗", items: salads }
+  
 ]
 
 export const metricsData = [

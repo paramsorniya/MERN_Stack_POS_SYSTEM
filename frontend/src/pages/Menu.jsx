@@ -3,9 +3,11 @@ import BottomNav from "../components/shared/BottomNav";
 import { useState } from "react";
 import BackButton from "../components/shared/BackButton";
 import { MdRestaurantMenu } from "react-icons/md";
+import BillInfo from "../components/menu/BillInfo";
+import CustomerInfo from "../components/menu/CustomerInfo";
+import CartInfo from "../components/menu/CartInfo";
 import MenuContainer from "../components/menu/MenuContainer";
 const Menu = () => {
-
   return (
     <section className="bg-[#1f1f1f] h-[calc(100vh-5rem)] overflow-hidden flex gap-3">
       <div className="flex-[3] ">
@@ -30,13 +32,24 @@ const Menu = () => {
             </div>
           </div>
         </div>
-        <MenuContainer/>
+        <div className="overflow-y-scroll h-[calc(100vh-5rem-7rem)]">
+          <MenuContainer />
+        </div>
       </div>
-    
 
       {/* right div */}
-      <div className="flex-[1] bg-blue-500 ">
+      <div className="flex-[1] bg-[#1a1a1a] mt-4 mr-3 h-[780px] rounded-lg pt-2 ">
+        {/* customer info */}
+        <CustomerInfo></CustomerInfo>
+
+        <hr className="border-[#2a2a2a] border-t-2" />
         
+        {/* Cart Items */}
+       <CartInfo></CartInfo>
+       
+  <hr className="border-[#2a2a2a] border-t-2" />
+        {/* bills */}
+        <BillInfo></BillInfo>
       </div>
 
       <BottomNav></BottomNav>
